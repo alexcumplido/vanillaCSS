@@ -48,11 +48,10 @@ footer {
     background-color:hsl(59, 87%, 47%);
 }
 
-/* .............................................. */
 main{
     display: flex;
 }
-
+/* .............................................. */
 .main-articles {
     display: flex;  
     flex-wrap: wrap;
@@ -64,7 +63,7 @@ main{
 }
 
 .main-articles article,
-main p  {
+.main-articles p  {
     width: 20em;
     height: 2em;    
     background-color: hsl(218, 93%, 70%)
@@ -83,7 +82,8 @@ aside {
 }
 
 aside p {   
-    height: 1em;
+    width: 20em;
+    height: 2em; 
     background-color: hsl(59, 97%, 74%); 
 }
 
