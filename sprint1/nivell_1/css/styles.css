@@ -1,0 +1,104 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} 
+
+body {
+    line-height: 1.5;
+    font-family: Helvetica, Verdana, Tahoma, sans-serif;
+    max-width: 75em;
+}
+
+header, main, footer {
+    margin: 1em;
+    border: 0.5em solid hsl(0, 0%, 0%);
+}
+
+.header-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0.5em;
+    border-bottom: 0.25em solid hsl(0, 0%, 0%);
+    background-color: hsl(215, 28%, 17%);
+}
+
+.logo,
+.header-superior nav,
+.social {
+    background-color: hsl(9, 100%, 64%);
+}
+
+.logo {
+    width: 15%;
+}
+
+.header-superior nav {
+    width: 60%;
+}
+
+.social {
+    width: 15%;
+}
+
+.header-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5em;
+    text-align: center;
+    background-color:hsl(36, 89%, 51%);
+}
+
+.hero {
+    width: 95%;
+    background-color:hsl(59, 87%, 47%);
+}
+
+main {
+    display: flex;
+}
+
+.content,
+aside {
+    padding: 0.5em;
+
+} 
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: hsl(9, 100%, 64%);
+}
+
+aside p {
+    background-color: hsl(59, 97%, 74%);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: hsl(218, 26%, 33%);
+    gap: 1em;
+}
+
+.content article  {
+    flex: 1;
+    background-color: hsl(218, 47%, 51%);
+}
+
+.content p {
+    background-color: hsl(218, 93%, 70%);
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:hsl(44, 78%, 51%);
+}
