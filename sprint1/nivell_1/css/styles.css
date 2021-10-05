@@ -8,34 +8,29 @@
 
 body {
     margin: 0 auto;
-    line-height: 1.5;
-    font-family: Helvetica, Verdana, Tahoma, sans-serif;
     max-width: 75em;
 }
 
 header, 
 main, 
-aside,
 footer {
     margin: 1em;
-    border: 0.5em solid hsl(0, 0%, 0%);
+    border: 0.25em solid hsl(0, 0%, 0%);
 }
 
 .header-sup {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 1em;
     gap: 1em;
-    border-bottom: 0.25em solid hsl(0, 0%, 0%);
+    padding: 1em;
+    border-bottom: 0.125em solid hsl(0, 0%, 0%);
     background-color: hsl(215, 34%, 31%);
 }
 
 .logo,
 .header-sup nav,
 .social {
-    height: 1em;
     flex: 1;
+    height: 1em;
     background-color: hsl(9, 100%, 64%);
 }
 
@@ -44,36 +39,41 @@ footer {
 }
 
 .header-inf {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     padding: 1em;
-    text-align: center;
     background-color:hsl(36, 89%, 51%);
 }
 
 .hero {
-    flex: 1;
     height: 1em;
     background-color:hsl(59, 87%, 47%);
 }
 
 /* .............................................. */
-main {
+main{
     display: flex;
+}
+
+.main-articles {
+    display: flex;  
     flex-wrap: wrap;
+    justify-content: space-evenly;
     padding: 1em;
     gap: 1em;
+    border-right: 0.25em solid hsl(0, 0%, 0%);
     background-color: hsl(218, 26%, 33%);
 }
 
-main article ,
+.main-articles article,
 main p  {
-    width: 15em;
+    width: 20em;
     height: 2em;    
     background-color: hsl(218, 93%, 70%)
 }
 
+.main-articles p {
+    flex-grow: 1;
+}
+/* .............................................. */
 aside {
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@ aside p {
     height: 1em;
     background-color: hsl(59, 97%, 74%); 
 }
-/* .............................................. */
+
 footer {
     padding: 1em;
     background-color:hsl(44, 78%, 51%);
