@@ -52,7 +52,6 @@ footer {
     background-color:hsl(59, 87%, 47%);
 }
 
-
 main{
     display: flex;
 }
@@ -94,17 +93,19 @@ footer {
     background-color:hsl(44, 78%, 51%);
 }
 
-/*
-@media (min-width: 768px) and (max-width: 1084px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     main {
-        display: flex;
         flex-direction: column;
-        border: 1em solid var(--mainTabletMobile);
+        border: 0.25em solid var(--mainTabletMobile);
     }
 
     .main-articles {
         border-right: none;
-        border-bottom: 1em solid var(--mainTabletMobile);
+        border-bottom: 0.25em solid var(--mainTabletMobile);
+    }
+
+    .main-articles article {
+        width: 20em;
     }
 
     aside p {
@@ -112,21 +113,29 @@ footer {
     }
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
   
-    main {
-        display: flex;
+    .header-sup {
         flex-direction: column;
-        border: 1em solid var(--mainTabletMobile);
+    }
+
+    main {
+        flex-direction: column;
+        border: 0.25em solid var(--mainTabletMobile);
     }
 
     .main-articles {
+        flex-direction: column;
         border-right: none;
-        border-bottom: 1em solid var(--mainTabletMobile);
+        border-bottom: 0.25em solid var(--mainTabletMobile);
+    }
+
+    .main-articles article {
+        width: 100%;
     }
 
     aside p {
         width: 100%;
     }
   }
-  */
+  
