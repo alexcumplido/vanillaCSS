@@ -63,9 +63,9 @@ main{
 }
 
 .main-articles article {
-    flex: 1 0 auto;
     width: 20em;
-    height: 2em;    
+    height: 2em;  
+    flex: 1 0 auto;
     background-color: hsl(218, 93%, 70%);
 }
 
@@ -87,3 +87,38 @@ footer {
     padding: 1em;
     background-color:hsl(44, 78%, 51%);
 }
+
+@media (min-width: 768px) and (max-width: 1084px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        border: 1em solid hsl(60, 100%, 50%);
+    }
+
+    .main-articles {
+        border-right: none;
+        border-bottom: 1em solid hsl(60, 100%, 50%);
+    }
+
+    aside p {
+        width: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  
+    main {
+        display: flex;
+        flex-direction: column;
+        border: 1em solid hsl(60, 100%, 50%);
+    }
+
+    .main-articles {
+        border-right: none;
+        border-bottom: 1em solid hsl(60, 100%, 50%);
+    }
+
+    aside p {
+        width: 100%;
+    }
+  }
