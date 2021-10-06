@@ -1,5 +1,7 @@
 :root {
-    --mainTabletMobile: hsl(60, 100%, 50%);
+    --borderBlack: hsl(0, 0%, 0%);
+    --borderYellow: hsl(60, 100%, 50%);
+   
 }
 
 *,
@@ -19,14 +21,14 @@ header,
 main, 
 footer {
     margin: 1em;
-    border: 0.25em solid hsl(0, 0%, 0%);
+    border: 0.25em solid var(--borderBlack);
 }
 
 .header-sup {
     display: flex;
     gap: 1em;
     padding: 1em;
-    border-bottom: 0.125em solid hsl(0, 0%, 0%);
+    border-bottom: 0.125em solid var(--borderBlack);
     background-color: hsl(215, 34%, 31%);
 }
 
@@ -61,7 +63,7 @@ main{
     flex-wrap: wrap;
     gap: 1em;
     padding: 1em;
-    border-right: 0.25em solid hsl(0, 0%, 0%);
+    border-right: 0.25em solid var(--borderBlack);
     background-color: hsl(218, 26%, 33%);
 }
 
@@ -96,12 +98,12 @@ footer {
 @media (min-width: 768px) and (max-width: 1024px) {
     main {
         flex-direction: column;
-        border: 0.25em solid var(--mainTabletMobile);
+        border: 0.25em solid var(--borderYellow);
     }
 
     .main-articles {
         border-right: none;
-        border-bottom: 0.25em solid var(--mainTabletMobile);
+        border-bottom: 0.25em solid var(--borderYellow);
     }
 
     .main-articles article {
@@ -121,13 +123,13 @@ footer {
 
     main {
         flex-direction: column;
-        border: 0.25em solid var(--mainTabletMobile);
+        border: 0.25em solid var(--borderYellow);
     }
 
     .main-articles {
         flex-direction: column;
         border-right: none;
-        border-bottom: 0.25em solid var(--mainTabletMobile);
+        border-bottom: 0.25em solid var(--borderYellow);
     }
 
     .main-articles article {
