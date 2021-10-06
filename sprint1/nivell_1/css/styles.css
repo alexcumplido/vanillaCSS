@@ -51,7 +51,7 @@ footer {
 main{
     display: flex;
 }
-/* .............................................. */
+
 .main-articles {
     display: flex;  
     flex-wrap: wrap;
@@ -69,7 +69,6 @@ main{
     background-color: hsl(218, 93%, 70%);
 }
 
-/* .............................................. */
 aside {
     display: flex;
     flex-direction: column;
