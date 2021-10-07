@@ -43,8 +43,24 @@ footer {
 }
 
 .header-sup nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-grow: 4;
 }
+.header-sup nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+   
+}
+
+a {
+    text-decoration: none;
+    padding: 1em;
+}
+
 /*----------------------------------------------------*/
 .header-inf {
     padding: 1em;
