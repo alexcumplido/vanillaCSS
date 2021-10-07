@@ -1,7 +1,6 @@
 :root {
     --borderBlack: hsl(0, 0%, 0%);
     --borderYellow: hsl(60, 100%, 50%);
-   
 }
 
 *,
@@ -41,7 +40,7 @@ footer {
 }
 
 .header-sup nav {
-    flex: 4 1 auto;
+    flex-grow: 4;
 }
 
 .header-inf {
@@ -115,8 +114,7 @@ footer {
     }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
-  
+@media (min-width: 280px) and (max-width: 767px) {
     .header-sup {
         flex-direction: column;
     }
@@ -135,6 +133,10 @@ footer {
     .main-articles article {
         width: 100%;
     }
+
+    aside {
+        background-color:hsl(2, 76%, 67%);;
+    } 
 
     aside p {
         width: 100%;
