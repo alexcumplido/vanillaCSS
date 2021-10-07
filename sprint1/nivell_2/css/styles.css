@@ -15,7 +15,7 @@ body {
     margin: 0 auto;
     max-width: 75em;
 }
-
+/*----------------------------------------------------*/
 header, 
 main, 
 footer {
@@ -34,15 +34,18 @@ footer {
 .logo,
 .header-sup nav,
 .social {
-    height: 1em;
     flex: 1 1 auto;
     background-color: hsl(9, 100%, 64%);
+}
+
+.logo img {
+    max-width: 4em;
 }
 
 .header-sup nav {
     flex-grow: 4;
 }
-
+/*----------------------------------------------------*/
 .header-inf {
     padding: 1em;
     background-color:hsl(36, 89%, 51%);
@@ -52,7 +55,7 @@ footer {
     height: 1em;
     background-color:hsl(59, 87%, 47%);
 }
-
+/*----------------------------------------------------*/
 main{
     display: flex;
 }
