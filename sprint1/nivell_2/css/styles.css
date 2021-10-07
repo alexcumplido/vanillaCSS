@@ -15,27 +15,24 @@ body {
     margin: 0 auto;
     max-width: 75em;
 }
-/*----------------------------------------------------*/
+
 header, 
 main, 
 footer {
     margin: 1em;
-    border: 0.25em solid var(--borderBlack);
 }
 
 .header-sup {
     display: flex;
     gap: 1em;
     padding: 1em;
-    border-bottom: 0.125em solid var(--borderBlack);
-    background-color: hsl(215, 34%, 31%);
+    background-color: hsl(0, 0%, 91%);
 }
 
 .logo,
 .header-sup nav,
 .social {
     flex: 1 1 auto;
-    background-color: hsl(9, 100%, 64%);
 }
 
 .logo img {
@@ -43,23 +40,28 @@ footer {
 }
 
 .header-sup nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-grow: 4;
-}
-.header-sup nav ul{
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    list-style: none;
-   
+    justify-content: center;
 }
 
-a {
-    text-decoration: none;
-    padding: 1em;
+.header-sup ul{
+    display: flex;
+    align-items: center;
+    gap: 6em;
+    list-style: none;
 }
+
+.header-sup a {
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+} 
 
 /*----------------------------------------------------*/
 .header-inf {
@@ -81,7 +83,6 @@ main{
     flex-wrap: wrap;
     gap: 1em;
     padding: 1em;
-    border-right: 0.25em solid var(--borderBlack);
     background-color: hsl(218, 26%, 33%);
 }
 
@@ -114,14 +115,13 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
+    .header-sup ul{
+        gap: 2em;
+    }
+    
     main {
         flex-direction: column;
-        border: 0.25em solid var(--borderYellow);
-    }
-
-    .main-articles {
-        border-right: none;
-        border-bottom: 0.25em solid var(--borderYellow);
     }
 
     .main-articles article {
@@ -136,17 +136,22 @@ footer {
 @media (min-width: 280px) and (max-width: 767px) {
     .header-sup {
         flex-direction: column;
+        align-items: center;
+        gap: 2em;
     }
 
+    .header-sup ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+    }
+    
     main {
         flex-direction: column;
-        border: 0.25em solid var(--borderYellow);
     }
 
     .main-articles {
         flex-direction: column;
-        border-right: none;
-        border-bottom: 0.25em solid var(--borderYellow);
     }
 
     .main-articles article {
@@ -161,3 +166,4 @@ footer {
         width: 100%;
     }
   }
+  
