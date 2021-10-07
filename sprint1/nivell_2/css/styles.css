@@ -38,6 +38,12 @@ footer {
     max-width: 4em;
 }
 
+header {
+    background-image: url("../img/headerEdited.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 .header-sup nav {
     flex-grow: 4;
     display: flex;
@@ -54,7 +60,12 @@ footer {
 .header-sup a {
     padding: 0.5em;
     text-decoration: none;
+    color: hsl(0, 1%, 17%);
 }
+
+.header-sup a:hover {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+  }
 
 .social {
     display: flex;
@@ -82,7 +93,7 @@ footer {
     font-weight: 600;
     color:hsla(34, 100%, 53%, 0.508);
 }
-
+/*---------------------------------------------------*/
 main{
     display: flex;
 }
@@ -96,7 +107,7 @@ main{
 }
 
 .main-articles article {
-    width: 17em;
+    width: 18em;
     height: 1em;  
     flex: 1 1 auto;
     background-color: hsla(226, 53%, 55%, 0.897);
@@ -117,7 +128,7 @@ aside p {
     margin-bottom: 0.5em;
     background-color: hsl(59, 97%, 74%); 
 }
-
+/*---------------------------------------------------*/
 footer {
     padding: 1em;
     background-color:hsl(44, 78%, 51%);
