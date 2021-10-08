@@ -103,6 +103,7 @@ main{
     display: flex;
     gap: 0.5em;
 }
+
 /*..... articles section.....*/
 .main-articles {
     display: flex;  
@@ -118,7 +119,7 @@ main{
     padding: 0.5em;
     background-color:hsl(0, 0%, 94%);
 }
-
+/* ........................................*/
 article figure {
     position: relative;
 }
@@ -127,7 +128,7 @@ article figure img {
     max-width: 100%;
     height: auto;
 }
-
+/* ........................................*/
 article figure span {
     display: block;
     position: absolute;
@@ -161,7 +162,6 @@ article a:hover {
     flex: 1 1 auto;
     padding: 0.5em;
 }
-
 
 /*..... aside section .....*/
 aside {
@@ -203,7 +203,6 @@ footer p {
 
 /*..... tabler @media  .....*/
 @media (min-width: 768px) and (max-width: 1024px) {
-
     .header-sup ul{
         gap: 2em;
     }
@@ -222,9 +221,8 @@ footer p {
         justify-content: space-around;
         gap: 0.5em;
     }
-
- 
 }
+
 /*..... smartphone @media  .....*/
 @media (min-width: 280px) and (max-width: 767px) {
     .header-sup {
@@ -257,7 +255,6 @@ footer p {
         width: 100%;
         gap: 1em;
     }
-  
   }
 
 
