@@ -21,7 +21,7 @@ body {
 header, 
 main, 
 footer {
-    margin: 1em;
+    margin: 0.5em;
 }
 /*..... Header sup and inf .....*/
 
@@ -130,13 +130,12 @@ article figure img {
 article figure span {
     display: block;
     position: absolute;
-    bottom: 0.25em;
-    left: 0.5em;
+    bottom: -0.25em;
     color:hsl(59, 100%, 50%);
 }
 
 article h2 {
-    padding: 0.12em;
+    padding: 0.50em 0em 0.10em 0.25em;
     color:hsl(0, 0%, 94%);
     background-color: hsl(9, 100%, 64%);
 }
@@ -146,10 +145,22 @@ article p {
     padding: 1em 0.5em;
 }
 
+article span:last-child{
+    padding: 0.5em;
+}
+
+article a:hover {
+    font-weight: 900;
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+    text-decoration: none;
+  }
+
 .main-articles p:last-child{
     flex: 1 1 auto;
     padding: 0.5em;
 }
+
+
 /*..... aside section .....*/
 aside {
     padding: 1em;
