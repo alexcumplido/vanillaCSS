@@ -1,9 +1,10 @@
+
 :root {
     --borderBlack: hsl(0, 0%, 0%);
     --borderYellow: hsl(60, 100%, 50%);
     --primaryBackground:hsl(0, 2%, 81%);
 }
-
+/*..... General styles .....*/
 *,
 *:before,
 *:after {
@@ -22,7 +23,9 @@ main,
 footer {
     margin: 1em;
 }
+/*..... Header sup and inf .....*/
 
+/*..... superior .....*/
 .header-sup {
     display: flex;
     gap: 1em;
@@ -71,8 +74,10 @@ header {
 .social {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 0.5em;
 } 
-
+/*..... inferior .....*/
 .header-inf {
     height: 10em;
     display: flex;
@@ -93,7 +98,7 @@ header {
     font-weight: 600;
     color:hsla(34, 100%, 53%, 0.508);
 }
-
+/*..... Main section .....*/
 main{
     display: flex;
     gap: 0.5em;
@@ -106,7 +111,7 @@ main{
     padding: 1em;
     background-color: var(--primaryBackground);
 }
-
+/*..... article card .....*/
 .main-articles article {
     width: 18em; 
     flex: 1 1 auto;
@@ -131,7 +136,7 @@ article h2 {
  .main-articles span {
     padding: 0.5em;
 }
- 
+/*..... aside section .....*/
 aside {
     padding: 1em;
     background-color: var(--primaryBackground);
@@ -144,14 +149,14 @@ aside p {
     margin-bottom: 0.5em;
     background-color: hsl(59, 97%, 74%); 
 }
-
+/*..... footer .....*/
 footer {
     text-align: center;
     padding: 1em;
     background-color: var(--primaryBackground);
 }
 
-
+/*..... tabler @media  .....*/
 @media (min-width: 768px) and (max-width: 1024px) {
 
     .header-sup ul{
@@ -170,7 +175,7 @@ footer {
         width: 100%;
     }
 }
-
+/*..... smartphone @media  .....*/
 @media (min-width: 280px) and (max-width: 767px) {
     .header-sup {
         flex-direction: column;
