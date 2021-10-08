@@ -119,19 +119,20 @@ main{
     background-color:hsl(0, 0%, 94%);
 }
 
-figure {
+article figure {
     position: relative;
 }
 
-figure .image-text {
-    display: block;
-    position: absolute;
-    bottom: -0.25em;
-    color:hsl(59, 100%, 50%);
+article figure img {
+    max-width: 100%;
 }
 
-figure img {
-    max-width: 100%;
+article figure span {
+    display: block;
+    position: absolute;
+    bottom: 0.25em;
+    left: 0.5em;
+    color:hsl(59, 100%, 50%);
 }
 
 article h2 {
@@ -140,22 +141,19 @@ article h2 {
     background-color: hsl(9, 100%, 64%);
 }
 
-.main-articles article p {
+article p {
     column-count:2;
     padding: 1em 0.5em;
-}
- .main-articles span {
-    padding: 0.5em;
 }
 
 .main-articles p:last-child{
     flex: 1 1 auto;
+    padding: 0.5em;
 }
 /*..... aside section .....*/
 aside {
     padding: 1em;
     background-color: var(--primaryBackground);
-    
 }
 
 aside p {   
