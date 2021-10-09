@@ -16,6 +16,7 @@
 body {
     margin: 0 auto;
     max-width: 75em;
+    font-family: helvetica, verdana, arial, sans-serif;
 }
 
 /*..... Header sup and inf .....*/
@@ -113,13 +114,13 @@ main{
 .main-articles {
     display: flex;  
     flex-wrap: wrap;    
-    gap: 1em;
-    padding: 1.1em;
+    gap: 1.25em;
+    padding: 0.7em;
     background-color: var(--primaryBackground);
 }
 
 .main-articles article {
-    width: 18em; 
+    width: 19.5em; 
     flex: 1 1 auto;
     padding: 0.5em;
     background-color:hsl(0, 0%, 94%);
@@ -131,7 +132,6 @@ article figure {
 
 article figure img {
     max-width: 100%;
-    height: auto;
 }
 article figure span {
     display: block;
@@ -144,7 +144,7 @@ article figure span {
 article h2 {
     padding: 0.50em 0em 0.10em 0.25em;
     color:hsl(0, 0%, 94%);
-    background-color: hsl(9, 100%, 64%);
+    background-color: hsl(9, 77%, 71%);
 }
 
 article p {
@@ -190,7 +190,6 @@ aside a {
 
 aside a:hover {
     box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
-    text-decoration: none;
 }
 
 /*..... footer .....*/
