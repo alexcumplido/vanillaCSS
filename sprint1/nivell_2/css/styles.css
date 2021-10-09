@@ -255,7 +255,6 @@ footer p {
     .header-sup ul li, 
     .header-sup a {
         color: hsl(0, 0%, 0%);
-        font-weight: 900;
     }
 
     .header-inf {
@@ -276,6 +275,10 @@ footer p {
     .main-articles {
         flex-direction: column;
         align-items: center;
+    }
+
+    .main-articles article {
+        width: 100%;
     }
 
     .main-articles article p {
