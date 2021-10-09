@@ -24,7 +24,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("../img/headerEdited.jpg");
+    background-image: url("../img/headerEdited.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -112,9 +112,9 @@ main{
 /*..... articles section.....*/
 .main-articles {
     display: flex;  
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     gap: 1em;
-    padding: 1em;
+    padding: 1.1em;
     background-color: var(--primaryBackground);
 }
 
