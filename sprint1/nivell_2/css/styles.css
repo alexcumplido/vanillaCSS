@@ -18,13 +18,16 @@ body {
     max-width: 75em;
 }
 
-header, 
-main, 
-footer {
-    margin: 0.5em;
-}
 /*..... Header sup and inf .....*/
-
+header {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../img/headerEdited.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 /*..... superior .....*/
 .header-sup {
     display: flex;
@@ -40,12 +43,6 @@ footer {
 
 .logo img {
     max-width: 4em;
-}
-
-header {
-    background-image: url("../img/headerEdited.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
 }
 
 .header-sup nav {
@@ -79,19 +76,21 @@ header {
 } 
 /*..... inferior .....*/
 .header-inf {
-    height: 10em;
+    height: 40%;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: center;  
 }
 
-.hero {
-    width: 75%;
-    height: 50%;    
+.hero {  
+    height: 100%;
+    width: 85%;
+    padding-bottom: 1em;
+    font-size: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: hsla(0, 0%, 0%, 0.049); 
+    background-color: hsla(0, 0%, 0%, 0.049);
 }
 
 .hero p {
@@ -102,6 +101,7 @@ header {
 main{
     display: flex;
     gap: 0.5em;
+    margin: 0.5em 0;
 }
 
 /*..... articles section.....*/
@@ -134,7 +134,7 @@ article figure span {
     position: absolute;
     bottom: 0.25em;
     left: 0.25em;
-    color:hsl(59, 100%, 50%);
+    color:hsla(58, 100%, 50%, 0.796);
 }
 
 article h2 {
@@ -193,6 +193,7 @@ aside a:hover {
 footer {
     text-align: center;
     padding: 0 0.5em;
+    margin-bottom: 0.5em;
     background-color: var(--primaryBackground);
 }
 
@@ -205,6 +206,12 @@ footer p {
 @media (min-width: 768px) and (max-width: 1024px) {
     .header-sup ul{
         gap: 2em;
+    }
+
+    .hero {  
+        height: 100%;
+        width: 100%;
+        font-size: 2em;
     }
     
     main {
@@ -235,6 +242,13 @@ footer p {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1em;
+    }
+
+    .hero {  
+        height: 100%;
+        width: 100%;
+        padding-bottom: 0;
+        font-size: 1em;
     }
     
     main {
