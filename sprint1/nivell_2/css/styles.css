@@ -181,8 +181,8 @@ aside ul {
 }
 
 aside a {
-    text-decoration: none;
     font-weight: 900;
+    text-decoration: none;
 }
 
 aside a:hover {
@@ -220,6 +220,10 @@ footer p {
 
     .main-articles article {
         width: 20em;
+    }
+
+    article p {
+        column-count:1;
     }
 
     aside ul {   
