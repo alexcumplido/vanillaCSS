@@ -130,12 +130,13 @@ article figure {
 article figure img {
     max-width: 100%;
 }
+
 article figure span {
     display: block;
     position: absolute;
     bottom: 0.25em;
     left: 0.25em;
-    color:hsla(58, 100%, 50%, 0.796);
+    color:hsla(63, 85%, 62%, 0.796);
 }
 
 article h2 {
