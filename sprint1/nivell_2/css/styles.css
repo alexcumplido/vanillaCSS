@@ -50,6 +50,7 @@ header {
     flex-grow: 4;
     display: flex;
     justify-content: center;
+    animation: downNav 0.5s ease-in;
 }
 
 .header-sup ul{
@@ -98,6 +99,7 @@ header {
     font-weight: 600;
     color:hsla(34, 100%, 53%, 0.508);
     background-color: hsla(0, 0%, 0%, 0.049);
+    animation: upHero 0.5s ease-in;
 }
 
 /*..... Main section .....*/
@@ -293,3 +295,26 @@ footer p {
     }
   }
   
+  @keyframes downNav {
+    0%{
+        opacity: 0;
+        transform: translateY(-10em);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes upHero {
+    0%{
+        opacity: 0;
+        transform: translateY(10em);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
