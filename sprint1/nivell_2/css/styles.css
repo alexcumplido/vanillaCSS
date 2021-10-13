@@ -1,7 +1,5 @@
 
 :root {
-    --borderBlack: hsl(0, 0%, 0%);
-    --borderYellow: hsl(60, 100%, 50%);
     --primaryBackground:hsl(0, 2%, 81%);
 }
 /*..... General styles .....*/
