@@ -16,10 +16,9 @@ body {
     max-width: 75em;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 16em;
+    grid-template-rows: 1fr 2fr 3em;
     grid-gap: 0.5em 1em; 
-    min-height: 100vh;
     font-family: helvetica, verdana, arial, sans-serif;
 }
 /*..... Header styles .....*/
@@ -103,11 +102,67 @@ header .hero {
 }
 
 /*..... Main styles .....*/
+
 main {
     grid-column: 1/3;
     grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 5em; 
+    background-color: var(--primaryBackground)  
 }
 
+article {
+    flex: 1 1 auto;
+    padding: 0.5em;
+    background-color:hsl(0, 0%, 94%);
+}
+
+main p:last-of-type {
+    grid-column:1/3;
+    grid-row: 3/4;  
+}
+
+
+
+article figure {
+    position: relative;
+}
+
+article figure img {
+    max-width: 100%;
+}
+
+article figure span {
+    display: block;
+    position: absolute;
+    bottom: 0.25em;
+    left: 0.25em;
+    color:hsla(63, 85%, 62%, 0.796);
+}
+
+article h2 {
+    padding: 0.50em 0em 0.10em 0.25em;
+    color:hsl(0, 0%, 94%);
+    background-color: hsl(9, 77%, 71%);
+}
+
+article p {
+    column-count:2;
+    padding: 1em 0.5em;
+}
+
+article a:last-child{
+    padding: 0.5em;
+}
+
+article a:hover {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+    text-decoration: none;
+}
+
+
+/*..... aside section .....*/
 aside {
     grid-column: 3/4;
     grid-row: 2/3;
@@ -115,7 +170,6 @@ aside {
     background-color: var(--primaryBackground);
 }
 
-/*..... aside section .....*/
 aside ul {   
     height: 100%;
     display: flex;
@@ -137,7 +191,17 @@ aside a:hover {
 footer {
     grid-column: 1/4;
     grid-row: 3/4;
+    text-align: center;
+    padding: 0 0.5em;
+    margin-bottom: 0.5em;
+    background-color: var(--primaryBackground);
 } 
+
+/*..... footer .....*/
+footer p {
+    padding: 0.75em 0;
+    background-color:hsl(0, 0%, 94%);
+}
 
 /* Tablet mediaQ */
 @media (min-width: 768px) and (max-width: 1024px) {
