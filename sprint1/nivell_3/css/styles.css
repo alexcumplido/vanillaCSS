@@ -10,7 +10,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-} 
+}
 
 body {
     max-width: 75em;
@@ -26,7 +26,7 @@ header {
     grid-column: 1/4;
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 4fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background-image: url("../img/headerEdited.webp");
     background-repeat: no-repeat;
@@ -38,15 +38,16 @@ header .logo {
     grid-row: 2/3;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .logo img {
-    max-width: 4em;
+    max-width: 5em;
+    margin-left: 1em;
 }
 
 header nav {
-    grid-column: 2/3;
+    grid-column: 3/8;
     grid-row: 2/3;
     display: flex;
     justify-content: center;
@@ -56,7 +57,7 @@ header nav {
 header ul{
     display: flex;
     align-items: center;
-    gap: 6em;
+    gap: 5em;
     list-style: none;
 }
 
@@ -75,7 +76,7 @@ header a:hover {
 }
 
 header .social {
-    grid-column: 3/4;
+    grid-column: 9/10;
     grid-row: 2/3;
     display: flex;
     align-items: center;
@@ -86,7 +87,7 @@ header .social {
 header .hero {
     width: 100%;
     height: 100%;
-    grid-column: 2/3;
+    grid-column: 2/9;
     grid-row: 5/8;
     justify-self: center;
     align-self: center;
