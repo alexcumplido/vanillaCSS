@@ -1,8 +1,16 @@
-body > * {
-    background-color: goldenrod;
-    padding: 1em;
-    font-size: 2em;
+
+:root {
+    --primaryBackground:hsl(0, 2%, 81%);
 }
+
+/*..... General styles .....*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} 
 
 body {
     max-width: 75em;
@@ -10,28 +18,91 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 2em 1em; 
+    grid-gap: 0.5em 1em; 
     min-height: 100vh;
+    font-family: helvetica, verdana, arial, sans-serif;
 }
-
+/*..... Header styles .....*/
 header {
     grid-column: 1/4;
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr
+    grid-template-columns: 1fr 4fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-image: url("../img/headerEdited.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
-.header-sup,
-.header-inf {
-    outline: 1px solid black;
+header .logo {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.header-sup {
-    display: grid;
-    
- }
+.logo img {
+    max-width: 4em;
+}
 
+header nav {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    animation: downTrans 0.5s ease-in; 
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+    gap: 6em;
+    list-style: none;
+}
+
+header ul li, 
+header a {
+    color: hsl(0, 0%, 50%);
+}
+
+header a {
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+header a:hover {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+
+header .social {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+header .hero {
+    width: 100%;
+    height: 100%;
+    grid-column: 2/3;
+    grid-row: 5/8;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1em;
+    font-size: 2em;
+    font-weight: 600;
+    color:hsla(34, 100%, 53%, 0.508);
+    background-color: hsla(0, 0%, 0%, 0.049);
+    animation: upTrans 0.5s ease
+}
+
+/*..... Main styles .....*/
 main {
     grid-column: 1/3;
     grid-row: 2/3;
@@ -40,6 +111,27 @@ main {
 aside {
     grid-column: 3/4;
     grid-row: 2/3;
+    padding: 1em;
+    background-color: var(--primaryBackground);
+}
+
+/*..... aside section .....*/
+aside ul {   
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+aside a {
+    font-weight: 900;
+    text-decoration: none;
+}
+
+aside a:hover {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
 }
 
 footer {
