@@ -16,24 +16,24 @@ body {
     max-width: 75em;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 16em;
-    grid-template-rows: 60vh 2fr 5vh;
+    grid-template-columns: 1fr 1fr 41vh;
+    grid-template-rows: 60vh 1fr 5vh;
     grid-gap: 0.5em 0.5em; 
     font-family: helvetica, verdana, arial, sans-serif;
 }
-/*..... Header styles .....*/
+/*..... Header .....*/
 header {
     grid-column: 1/4;
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 4fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background-image: url("../img/headerEdited.webp");
+    grid-template-columns: repeat(4, 1fr) 4fr repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    background: url("../img/headerEdited.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-header .logo {
+.logo {
     grid-column: 1/2;
     grid-row: 2/3;
     display: flex;
@@ -50,24 +50,23 @@ header nav {
     grid-column: 3/8;
     grid-row: 2/3;
     display: flex;
-    justify-content: center;
-    animation: downTrans 0.5s ease-in; 
+    animation: downTrans 0.75s ease-in; 
 }
 
 header ul{
     display: flex;
     align-items: center;
-    gap: 4em;
+    gap: 5em;
     list-style: none;
 }
-
+/*Included links from social*/
 header ul li, 
 header a {
     color: hsl(0, 0%, 50%);
 }
 
 header a {
-    padding: 0.5em;
+    padding: 0.50em;
     text-decoration: none;
 }
 
@@ -75,28 +74,24 @@ header a:hover {
     box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
 }
 
-header .social {
+.social {
     grid-column: 9/10;
     grid-row: 2/3;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5em;
 }
 
-header .hero {
-    width: 100%;
-    height: 100%;
+.hero {
     grid-column: 2/9;
     grid-row: 5/8;
-    justify-self: center;
-    align-self: center;
+    justify-self: stretch;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2em;
+    padding-bottom: 0.5em;
+    font-size: 1.75em;
     font-weight: 600;
-    color:hsla(34, 100%, 53%, 0.508);
+    color:hsla(19, 82%, 71%, 0.707);
     background-color: hsla(0, 0%, 0%, 0.049);
     animation: upTrans 0.5s ease
 }
@@ -106,23 +101,16 @@ main {
     grid-column: 1/3;
     grid-row: 2/3;
     display: grid;
-    gap: 1em;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 4em; 
+    grid-template-rows: 1fr 1fr 5vh; 
+    grid-gap: 1em;
     padding: 0.7em; 
     background-color: var(--primaryBackground);
-    
 }
 
 article {
-    flex: 1 1 auto;
     padding: 0.5em;
     background-color:hsl(0, 0%, 94%);
-}
-
-main p:last-of-type {
-    grid-column:1/3;
-    grid-row: 3/4;  
 }
 
 article figure {
@@ -130,7 +118,7 @@ article figure {
 }
 
 article figure img {
-    width: 100%;
+    max-width: 100%;
 }
 
 article figure span {
@@ -142,7 +130,7 @@ article figure span {
 }
 
 article h2 {
-    padding: 0.50em 0em 0.10em 0.25em;
+    padding: 0.50em 0 0.10em 0.25em;
     color:hsl(0, 0%, 94%);
     background-color: hsl(9, 77%, 71%);
 }
@@ -162,14 +150,19 @@ article a:hover {
 }
 
 main p:last-child{
+    text-align: center;
     padding: 0.5em;
+}
+
+main p:last-of-type {
+    grid-column:1/3;
+    grid-row: 3/4;  
 }
 
 /*..... aside section .....*/
 aside {
     grid-column: 3/4;
     grid-row: 2/3;
-    padding: 1em;
     background-color: var(--primaryBackground);
 }
 
@@ -191,18 +184,20 @@ aside a:hover {
     box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
 }
 
+/*..... footer .....*/
 footer {
     grid-column: 1/4;
     grid-row: 3/4;
-    text-align: center;
     padding: 0 0.5em;
     margin-bottom: 0.5em;
     background-color: var(--primaryBackground);
 } 
 
-/*..... footer .....*/
 footer p {
-    padding: 0.75em 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color:hsl(0, 0%, 94%);
 }
 
@@ -228,6 +223,7 @@ footer p {
     header .logo img {
         margin: 0;
     }
+
     
     header nav {
         grid-column: 1/10;
@@ -242,6 +238,7 @@ footer p {
     header .social {
         grid-column: 5/6;
         grid-row: 3/4;
+        justify-content: center;
     }
 
     header .hero {
@@ -312,6 +309,7 @@ footer p {
     header .social {
         grid-column: 5/6;
         grid-row: 3/4;
+        justify-content: center;
     }
 
     header .hero {
@@ -343,7 +341,6 @@ footer p {
     main article img {
         width: 100%;
     }
-
 
     main article p {
         column-count: 1;
