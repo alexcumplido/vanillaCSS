@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 16em;
-    grid-template-rows: 60vh 2fr 3em;
+    grid-template-rows: 60vh 2fr 5vh;
     grid-gap: 0.5em 0.5em; 
     font-family: helvetica, verdana, arial, sans-serif;
 }
@@ -57,7 +57,7 @@ header nav {
 header ul{
     display: flex;
     align-items: center;
-    gap: 5em;
+    gap: 4em;
     list-style: none;
 }
 
@@ -94,7 +94,6 @@ header .hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 1em;
     font-size: 2em;
     font-weight: 600;
     color:hsla(34, 100%, 53%, 0.508);
@@ -131,7 +130,7 @@ article figure {
 }
 
 article figure img {
-    max-width: 100%;
+    width: 100%;
 }
 
 article figure span {
@@ -207,21 +206,56 @@ footer p {
     background-color:hsl(0, 0%, 94%);
 }
 
-/* Tablet mediaQ */
+/* ..... Tablet mediaQ ..... */
 @media (min-width: 768px) and (max-width: 1024px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 40vh 1fr 1fr 5vh;
     }
     
     header {
         grid-column: 1/2;
         grid-row: 1/2;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    header .logo {
+        grid-column: 5/6;
+        grid-row: 1/2;
+        justify-content: center;
+    }
+
+    header .logo img {
+        margin: 0;
+    }
+    
+    header nav {
+        grid-column: 1/10;
+        grid-row: 2/3;
+    }
+
+    header nav ul li, 
+    header a {
+        color: hsl(0, 0%, 0%);
+    }
+
+    header .social {
+        grid-column: 5/6;
+        grid-row: 3/4;
+    }
+
+    header .hero {
+        grid-column: 1/10;
+        grid-row: 4/5;
     }
     
     main {
         grid-column: 1/2;
         grid-row: 2/3;
+    }
+
+    main article p {
+        column-count: 1;
     }
     
     aside {
@@ -239,22 +273,96 @@ footer p {
 @media (min-width: 280px) and (max-width: 767px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 3fr 1fr 1fr 1fr;
+        grid-template-rows: 40vh 1fr 50vh 5vh;
+        grid-gap: 0.5em 0em; 
+    }
+    /* ..... header ..... */
+    header {
+        grid-row: 1/2;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
-    header {
-        grid-column: 1/2;
+    header .logo {
+        grid-column: 5/6;
         grid-row: 1/2;
+        justify-content: center;
+    }
+
+    header .logo img {
+        max-width: 3.5em;
+        margin: 0;
     }
     
-    main {
-        grid-column: 1/2;
+    header nav {
+        grid-column: 1/10;
         grid-row: 2/3;
     }
-    
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    header nav ul li, 
+    header a {
+        color: hsl(0, 0%, 0%);
+    }
+
+    header .social {
+        grid-column: 5/6;
+        grid-row: 3/4;
+    }
+
+    header .hero {
+        grid-column: 1/10;
+        grid-row: 4/5;
+        font-size: 1,5em;
+    }
+    /* ..... articles section ..... */
+    main {
+        grid-row: 2/3;
+        grid-template-columns: 1fr;
+        grid-gap: 0.5em 0em;
+        grid-template-rows: 1fr 1fr 1fr 1fr 10em;
+    }
+
+    main article:nth-of-type(1){
+        grid-row: 1/2;
+    }
+    main article:nth-of-type(2){
+        grid-row: 2/3;
+    }
+    main article:nth-of-type(3){
+        grid-row: 3/4;
+    }
+    main article:nth-of-type(4){
+        grid-row: 4/5;
+    }
+
+    main article img {
+        width: 100%;
+    }
+
+
+    main article p {
+        column-count: 1;
+        padding: 1em 0.5em;
+    }
+
+    main p:last-of-type{
+        grid-row: 5/6;
+        align-self: center;
+    }
+
+    /* ..... aside and footer ..... */
     aside {
         grid-column: 1/2;
         grid-row: 3/4;
+    }
+
+    aside ul {   
+        gap: 1em;
     }
     
     footer {
