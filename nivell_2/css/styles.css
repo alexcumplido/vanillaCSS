@@ -54,7 +54,7 @@ header {
 .header-sup ul{
     display: flex;
     align-items: center;
-    gap: 3em;
+    gap: 5em;
     list-style: none;
 }
 
