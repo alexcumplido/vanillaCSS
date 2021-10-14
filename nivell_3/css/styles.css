@@ -292,7 +292,7 @@ footer p {
     }
 
     header .logo img {
-        max-width: 4.5em;
+        max-width: 3.5em;
         margin: 0;
         animation: toDown 0.75s ease-in;
     }
@@ -329,7 +329,7 @@ footer p {
     header .hero {
         grid-column: 1/10;
         grid-row: 4/5;
-        font-size: 1,5em;
+        font-size: 1em;
     }
     
     main {
