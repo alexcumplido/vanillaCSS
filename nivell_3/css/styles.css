@@ -30,7 +30,8 @@ header {
     grid-template-rows: repeat(7, 1fr);
     background: url("../img/headerEdited.webp");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 .logo {
@@ -282,7 +283,7 @@ footer p {
 @media (min-width: 280px) and (max-width: 767px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 40vh 1fr 50vh 5vh;
+        grid-template-rows: 60vh 1fr 50vh 5vh;
         grid-gap: 0.5em 0em; 
     }
 
