@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 41vh;
-    grid-template-rows: 60vh 1fr 5vh;
+    grid-template-rows: 60vh 1fr 7vh;
     grid-gap: 0.5em 0.5em; 
     font-family: helvetica, verdana, arial, sans-serif;
 }
@@ -56,17 +56,17 @@ header nav {
 header ul{
     display: flex;
     align-items: center;
-    gap: 5em;
+    gap: 4.5em;
     list-style: none;
 }
-/*Included links from social*/
+/*Included links from nav and .social*/
 header ul li, 
 header a {
     color: hsl(0, 0%, 50%);
 }
 
 header a {
-    padding: 0.50em;
+    padding: 0.25em;
     text-decoration: none;
 }
 
@@ -79,6 +79,7 @@ header a:hover {
     grid-row: 2/3;
     display: flex;
     align-items: center;
+    gap: 0.5em;
 }
 
 .hero {
@@ -159,7 +160,7 @@ main p:last-of-type {
     grid-row: 3/4;  
 }
 
-/*..... aside section .....*/
+/*..... Aside section .....*/
 aside {
     grid-column: 3/4;
     grid-row: 2/3;
@@ -184,7 +185,7 @@ aside a:hover {
     box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
 }
 
-/*..... footer .....*/
+/*..... Footer .....*/
 footer {
     grid-column: 1/4;
     grid-row: 3/4;
@@ -210,8 +211,7 @@ footer p {
     
     header {
         grid-column: 1/2;
-        grid-row: 1/2;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
     }
 
     header .logo {
@@ -224,10 +224,9 @@ footer p {
         margin: 0;
     }
 
-    
     header nav {
         grid-column: 1/10;
-        grid-row: 2/3;
+        justify-content: center;
     }
 
     header nav ul li, 
@@ -235,10 +234,15 @@ footer p {
         color: hsl(0, 0%, 0%);
     }
 
+    header a:hover{
+        font-size: 1.25em;
+    }
+
     header .social {
         grid-column: 5/6;
         grid-row: 3/4;
         justify-content: center;
+        gap: 1em;
     }
 
     header .hero {
@@ -266,17 +270,17 @@ footer p {
     } 
   }
   
-/* Smartphone mediaQ */
+/*..... Smartphone mediaQ .....*/
 @media (min-width: 280px) and (max-width: 767px) {
     body {
         grid-template-columns: 1fr;
         grid-template-rows: 40vh 1fr 50vh 5vh;
         grid-gap: 0.5em 0em; 
     }
-    /* ..... header ..... */
+
     header {
         grid-row: 1/2;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
     }
 
     header .logo {
@@ -286,13 +290,14 @@ footer p {
     }
 
     header .logo img {
-        max-width: 3.5em;
+        max-width: 4.5em;
         margin: 0;
     }
     
     header nav {
         grid-column: 1/10;
         grid-row: 2/3;
+        justify-content: center;
     }
 
     header nav ul {
@@ -306,10 +311,15 @@ footer p {
         color: hsl(0, 0%, 0%);
     }
 
+    header a:hover {
+        font-size: 1.25em;
+    }
+
     header .social {
         grid-column: 5/6;
         grid-row: 3/4;
         justify-content: center;
+        gap: 1em;
     }
 
     header .hero {
@@ -317,7 +327,7 @@ footer p {
         grid-row: 4/5;
         font-size: 1,5em;
     }
-    /* ..... articles section ..... */
+    
     main {
         grid-row: 2/3;
         grid-template-columns: 1fr;
@@ -352,14 +362,13 @@ footer p {
         align-self: center;
     }
 
-    /* ..... aside and footer ..... */
     aside {
         grid-column: 1/2;
         grid-row: 3/4;
     }
 
     aside ul {   
-        gap: 1em;
+        gap: 0.5em;
     }
     
     footer {
