@@ -280,7 +280,7 @@ footer p {
   }
   
 /*..... Smartphone mediaQ .....*/
-@media (min-width: 280px) and (max-width: 767px) {
+@media (min-width: 240px) and (max-width: 767px) {
     body {
         grid-template-columns: 1fr;
         grid-template-rows: 60vh 1fr 50vh 5vh;
