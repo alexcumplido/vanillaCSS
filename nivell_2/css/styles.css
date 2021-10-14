@@ -31,7 +31,7 @@ header {
 /*..... superior .....*/
 .header-sup {
     display: flex;
-    gap: 1em;
+    gap: 4em;
     padding: 1em;
 }
 
@@ -48,14 +48,13 @@ header {
 .header-sup nav {
     flex-grow: 4;
     display: flex;
-    justify-content: center;
     animation: downNav 0.5s ease-in;
 }
 
 .header-sup ul{
     display: flex;
     align-items: center;
-    gap: 6em;
+    gap: 3em;
     list-style: none;
 }
 
@@ -97,7 +96,7 @@ header {
     justify-content: center;
     font-size: 2em;
     font-weight: 600;
-    color:hsla(34, 100%, 53%, 0.508);
+    color:hsla(19, 82%, 71%, 0.707);
     background-color: hsla(0, 0%, 0%, 0.049);
     animation: upHero 0.5s ease
 }
@@ -130,7 +129,7 @@ article figure {
 }
 
 article figure img {
-    max-width: 100%;
+    width: 100%;
 }
 
 article figure span {
@@ -206,8 +205,13 @@ footer p {
 
 /*..... tabler @media  .....*/
 @media (min-width: 768px) and (max-width: 1024px) {   
+
+    header{
+        height: 40vh;
+    }
+
     .header-sup ul{
-        gap: 2em;
+        gap: 1em;
     }
 
     .hero {  
@@ -229,23 +233,22 @@ footer p {
 
     aside ul {   
         width: 100%;
-        flex-direction: row;
         justify-content: space-around;
-        gap: 0.4em;
+        gap:1em;
     }
 }
 
 /*..... smartphone @media  .....*/
 @media (min-width: 280px) and (max-width: 767px) {
     header {
-        height:70vh;
+        height: 50vh;
         background-image: url("../img/headerMobile.webp");
     }
     
     .header-sup {
         flex-direction: column;
         align-items: center;
-        gap: 2em;
+        gap: 4em;
     }
 
     .header-sup ul{
@@ -260,6 +263,10 @@ footer p {
         color: hsl(0, 0%, 0%);
     }
 
+    .header-sup a:hover {
+        font-size: 1em;
+    }
+
     .header-inf {
         height: 25%;
     }
@@ -268,7 +275,7 @@ footer p {
         height: 100%;
         width: 100%;
         padding-bottom: 0;
-        font-size: 1,5em;
+        font-size: 1.25em;
     }
     
     main {
@@ -292,29 +299,5 @@ footer p {
     aside ul {   
         width: 100%;
         gap: 1em;
-    }
-}
-  
-@keyframes downNav {
-    0%{
-        opacity: 0;
-        transform: translateY(-10em);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes upHero {
-    0%{
-        opacity: 0;
-        transform: translateY(10em);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0);
     }
 }
