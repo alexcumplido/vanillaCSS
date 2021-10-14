@@ -209,9 +209,14 @@ footer p {
     header{
         height: 40vh;
     }
+    
+    header nav{
+        justify-content: center;
+     }
 
     .header-sup ul{
         gap: 1em;
+       
     }
 
     .hero {  

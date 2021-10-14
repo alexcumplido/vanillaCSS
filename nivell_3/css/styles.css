@@ -44,13 +44,14 @@ header {
 .logo img {
     max-width: 5em;
     margin-left: 1em;
+    animation: toRight 0.75s ease-in;
 }
 
 header nav {
     grid-column: 3/8;
     grid-row: 2/3;
     display: flex;
-    animation: downTrans 0.75s ease-in; 
+    animation: toDown 0.75s ease-in; 
 }
 
 header ul{
@@ -80,6 +81,7 @@ header a:hover {
     display: flex;
     align-items: center;
     gap: 0.5em;
+    animation: toLeft 0.75s ease-in; 
 }
 
 .hero {
@@ -94,7 +96,7 @@ header a:hover {
     font-weight: 600;
     color:hsla(19, 82%, 71%, 0.707);
     background-color: hsla(0, 0%, 0%, 0.049);
-    animation: upTrans 0.5s ease
+    animation: toUp 0.75s ease-in ;
 }
 
 /*..... Articles section styles .....*/
@@ -215,7 +217,7 @@ footer p {
     }
 
     header .logo {
-        grid-column: 5/6;
+        grid-column: 1/2;
         grid-row: 1/2;
         justify-content: center;
     }
@@ -225,8 +227,13 @@ footer p {
     }
 
     header nav {
-        grid-column: 1/10;
+        grid-column: 3/8;
+        grid-row: 1/2;
         justify-content: center;
+    }
+
+    header nav ul {
+        gap: 1.5em;
     }
 
     header nav ul li, 
@@ -239,8 +246,8 @@ footer p {
     }
 
     header .social {
-        grid-column: 5/6;
-        grid-row: 3/4;
+        grid-column: 9/10;
+        grid-row: 1/2;
         justify-content: center;
         gap: 1em;
     }
@@ -292,12 +299,14 @@ footer p {
     header .logo img {
         max-width: 4.5em;
         margin: 0;
+        animation: toDown 0.75s ease-in;
     }
     
     header nav {
         grid-column: 1/10;
         grid-row: 2/3;
         justify-content: center;
+        animation: toRight 0.75s ease-in;
     }
 
     header nav ul {
@@ -377,7 +386,32 @@ footer p {
     } 
   }
 
-@keyframes downTrans {
+
+@keyframes toLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(20em);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes toRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-10em);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes toDown {
     0%{
         opacity: 0;
         transform: translateY(-10em);
@@ -389,10 +423,10 @@ footer p {
     }
 }
 
-@keyframes upTrans {
+@keyframes toUp {
     0%{
         opacity: 0;
-        transform: translateY(10em);
+        transform: translateY(20em);
     }
 
     100%{
