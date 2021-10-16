@@ -153,14 +153,11 @@ article a:hover {
     text-decoration: none;
 }
 
-main p:last-child{
+main p:last-of-type{
+    grid-column:1/3;
+    grid-row: 3/4; 
     text-align: center;
     padding: 0.5em;
-}
-
-main p:last-of-type {
-    grid-column:1/3;
-    grid-row: 3/4;  
 }
 
 /*..... Aside section .....*/
