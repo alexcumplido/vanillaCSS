@@ -123,10 +123,9 @@ article figure {
 article figure img {
     max-width: 100%;
     height: 15em;
-
 }
 
-article figure span {
+article figure figcaption {
     display: block;
     position: absolute;
     bottom: 0.25em;
